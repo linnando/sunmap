@@ -10,10 +10,11 @@ resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repos
 
 libraryDependencies ++= Seq(
   "org.scala-js" %%% "scalajs-dom" % "0.9.1",
-  "io.surfkit" %%% "scalajs-google-maps" % "0.0.2-SNAPSHOT"
+  "io.surfkit" %%% "scalajs-google-maps" % "0.0.2-SNAPSHOT",
+  "org.webjars" % "google-maps-canvas-layer" % "20150622-13ce11d"
 )
 
 jsDependencies ++= Seq(
-  ProvidedJS / "CanvasLayer.js",
-  ProvidedJS / "CanvasLayerOptions.js"
+  "org.webjars" % "google-maps-canvas-layer" % "20150622-13ce11d" / "20150622-13ce11d/CanvasLayer.js",
+  "org.webjars" % "google-maps-canvas-layer" % "20150622-13ce11d" / "20150622-13ce11d/CanvasLayerOptions.js"
 )
